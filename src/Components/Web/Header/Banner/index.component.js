@@ -26,7 +26,7 @@ class WBanner extends React.Component {
                         <div className="row align-items-center">
                             <div className="col-12 col-md-6 order-md-2 mb-5 mb-md-0">
                                 <div className="position-relative left-5 left-md-0">
-                                    <figure><img alt="" src="https://www.ebony.com/wp-content/uploads/2016/07/happy_couple_original_12948.jpg" className="img-fluid mw-md-130 mw-lg-100 rounded perspective-md-right"/></figure>
+                                    <figure><img alt="" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/128029242/original/f03e30a7ed42172f48231623223ff075a18c4440/implement-a-ussd-application.jpg" className="img-fluid mw-md-130 mw-lg-100 rounded perspective-md-right"/></figure>
                                 </div>
                                 <div className="card shadow-lg mb-3 col-8 col-md-6 col-lg-5 px-0 position-absolute bottom-n6 bottom-md-n5 left-4 left-md-n4 z-index-100">
                                     <div className="card-body px-lg-5 pt-5 text-center h-100">
