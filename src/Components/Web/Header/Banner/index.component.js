@@ -4,7 +4,7 @@ import React from 'react';
 class WBanner extends React.Component {
     render() {
       return (
-            <section className="slice pt-md-8 pb-md-0 bg-section-secondary">
+            <section className="slice pt-md-8 pb-md-0 bg-section-secondary mt-5">
                 <div className="bg-absolute-cover bg-size--contain d-flex align-items-center">
                     <figure className="w-100 d-none d-lg-block"><svg xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" width="1338px" height="629px" viewBox="0 0 1338 629" version="1.1" className="injected-svg svg-inject">
                             <title>dot_map</title>
@@ -30,20 +30,20 @@ class WBanner extends React.Component {
                                         <div className="icon icon-lg icon-shape rounded-circle bg-soft-success text-success"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-check">
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg></div>
-                                        <p className="mt-4 text-muted mb-0">Fast and secure ussd gateway</p>
+                                        <p className="mt-4 h6 mb-0 font-weight-bolder">Fast and secure ussd gateway</p>
                                         <hr className="divider divider-fade my-3"/>
-                                        <h6 className="h6 mb-0">0% commision</h6>
+                                        {/* <h6 className="h6 mb-0">0% commision</h6> */}
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12 col-md-7 order-md-1 pr-lg-5 mt-5 mt-md-0">
-                                <h6 className="">- Pension Fund Administrator</h6>
+                                <h6 className="">- Pension Fund Managers</h6>
                                 <h1 className="display-4 font-weight-bolder mb-3">A better way <strong className="d-block text-primary font-weight-bold h1">to connect to your audience.</strong></h1>
-                                <p className="lead text-muted">The easiest way to connect and accept payments from customers anywhere in the nigeria.</p>
-                                <div className="mt-5"><a href="#" className="btn btn-primary btn-icon"><span className="btn-inner--text">Get started</span><span className="btn-inner--icon"> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeWinecap="round" strokeWinejoin="round" className="feather feather-arrow-right">
+                                <p className="lead text-muted">The easiest way to connect and accept payments from customers anywhere in nigeria.</p>
+                                <div className="mt-5"><a href="#" className="btn btn-primary btn-icon rounded-0"><span className="btn-inner--text">Create account</span><span className="btn-inner--icon"> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeWinecap="round" strokeWinejoin="round" className="feather feather-arrow-right">
                                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                                 <polyline points="12 5 19 12 12 19"></polyline>
-                                            </svg> </span></a><a href="#" className="btn btn-neutral btn-icon d-none d-lg-inline-block">Download Theme</a></div>
+                                            </svg> </span></a><a href="#" className="btn btn-neutral btn-icon d-none d-lg-inline-block">Demo</a></div>
                                 <div className="mt-5 mt-lg-5 mt-xl-6">
                                     <h6 className="text-sm text-dark opacity-7 mb-3">Compatible with:</h6>
                                     <div className="d-flex">

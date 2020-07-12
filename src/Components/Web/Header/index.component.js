@@ -6,7 +6,7 @@ import WBanner from './Banner/index.component';
 class WHeader extends React.Component {
     render() {
       return (
-        <div>
+        <div className="bg-primary">
             <WNavBar/>
             <WBanner/>
         </div>
