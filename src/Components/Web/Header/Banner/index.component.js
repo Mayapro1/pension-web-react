@@ -21,37 +21,40 @@ class WBanner extends React.Component {
                 <div data-offset-top="#navbar-main" style={{paddingTop: "58.2266px"}}>
                     <div className="container position-relative zindex-100">
                         <div className="row align-items-center">
-                            <div className="col-12 col-md-6 order-md-2 mb-5 mb-md-0">
+                            <div className="col-12 col-md-5 order-md-2 mb-5 mb-md-0">
                                 <div className="position-relative left-5 left-md-0">
                                     <figure><img alt="" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/128029242/original/f03e30a7ed42172f48231623223ff075a18c4440/implement-a-ussd-application.jpg" className="img-fluid mw-md-130 mw-lg-100 rounded perspective-md-right"/></figure>
                                 </div>
                                 <div className="card shadow-lg mb-3 col-8 col-md-6 col-lg-5 px-0 position-absolute bottom-n6 bottom-md-n5 left-4 left-md-n4 z-index-100">
-                                    <div className="card-body px-lg-5 pt-5 text-center h-100">
+                                    <div className="card-body px-lg-1 pt-5 text-center h-100">
                                         <div className="icon icon-lg icon-shape rounded-circle bg-soft-success text-success"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-check">
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg></div>
-                                        <p className="mt-4 text-muted mb-0">Fast and secure bank transfer</p>
+                                        <p className="mt-4 text-muted mb-0">Fast and secure ussd gateway</p>
                                         <hr className="divider divider-fade my-3"/>
                                         <h6 className="h6 mb-0">0% commision</h6>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 order-md-1 pr-lg-5 mt-5 mt-md-0">
-                                <h6 className="">- Build like a Pro</h6>
-                                <h1 className="display-4 font-weight-bolder mb-3">A better way <strong className="d-block text-primary font-weight-bold h1">to manage money.</strong></h1>
-                                <p className="lead text-muted">Build a beautiful, modern website with flexible Bootstrap components built from scratch.</p>
+                            <div className="col-12 col-md-7 order-md-1 pr-lg-5 mt-5 mt-md-0">
+                                <h6 className="">- Pension Fund Administrator</h6>
+                                <h1 className="display-4 font-weight-bolder mb-3">A better way <strong className="d-block text-primary font-weight-bold h1">to connect to your audience.</strong></h1>
+                                <p className="lead text-muted">The easiest way to connect and accept payments from customers anywhere in the nigeria.</p>
                                 <div className="mt-5"><a href="#" className="btn btn-primary btn-icon"><span className="btn-inner--text">Get started</span><span className="btn-inner--icon"> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeWinecap="round" strokeWinejoin="round" className="feather feather-arrow-right">
                                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                                 <polyline points="12 5 19 12 12 19"></polyline>
                                             </svg> </span></a><a href="#" className="btn btn-neutral btn-icon d-none d-lg-inline-block">Download Theme</a></div>
                                 <div className="mt-5 mt-lg-5 mt-xl-6">
-                                    <h6 className="text-sm text-white opacity-7 mb-3">Compatible with:</h6>
+                                    <h6 className="text-sm text-dark opacity-7 mb-3">Compatible with:</h6>
                                     <div className="d-flex">
                                         <div className="mr-3">
-                                            <div className="icon icon-shape icon-white rounded-circle" data-toggle="tooltip" title="" data-original-title="Bootstrap 4.4.1"><img alt="" src="https://webpixels.s3.eu-central-1.amazonaws.com/public/icons/bootstrap.svg" style={{width:"20px"}}/></div>
+                                            <div className="icon icon-shape icon-white rounded-circle" data-toggle="tooltip" title="" data-original-title="Bootstrap 4.4.1"><img alt="" src="https://cdn.worldvectorlogo.com/logos/laravel.svg" style={{width:"20px"}}/></div>
                                         </div>
                                         <div className="mr-3">
-                                            <div className="icon icon-shape icon-white rounded-circle" data-toggle="tooltip" title="" data-original-title="Sass"><img alt="" src="https://webpixels.s3.eu-central-1.amazonaws.com/public/icons/sass.svg" style={{width:"20px"}}/></div>
+                                            <div className="icon icon-shape icon-white rounded-circle" data-toggle="tooltip" title="" data-original-title="Sass"><img alt="" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/full/nodejslogo.png" style={{width:"20px"}}/></div>
+                                        </div>
+                                        <div className="mr-3">
+                                            <div className="icon icon-shape icon-white rounded-circle" data-toggle="tooltip" title="" data-original-title="Sass"><img alt="" src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/25/2020/04/J.png" style={{width:"20px"}}/></div>
                                         </div>
                                     </div>
                                 </div>
