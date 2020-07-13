@@ -56,13 +56,13 @@ class WServiceCard extends React.Component {
                                             <div className="col"><img src="https://cdn-images-1.medium.com/max/538/1*2QQEZmuXPiUUfAT1SI4KpA@2x.png" alt="Image placeholder" className="rounded-sm" style={{height:"26px"}}/></div>
                                             <div className="col-auto"><span className="badge badge-success">Active</span></div>
                                         </div>
-                                        <div className="my-4"><span className="surtitle text-light">USSD Code</span>
+                                        <div className="my-4"><span className="surtitle text-light ml-5">USSD Code</span>
                                             <br/>
-                                            <h2 className="text-center text-white h3">*347*007* { <i className="h4 text-warning">CHANNEL</i> } #</h2>
+                                            <h2 className="text-center text-white h3">*347*007* { <span className="h4 text-warning font-weight-bolder">CHANNEL</span> } #</h2>
                                         </div>
                                         <div className="row">
-                                            <div className="col"><span className="surtitle text-light">Secure</span> <span className="d-block h6 text-white">John Snow</span></div>
-                                            <div className="col"><span className="surtitle text-light">Expiry date</span> <span className="d-block h6 text-white">11/23</span></div>
+                                            <div className="col"><span className="surtitle text-light">Secure</span> <span className="d-block h6 text-white">Create Account</span></div>
+                                            <div className="col"><span className="surtitle text-light">Payment</span> <span className="d-block h6 text-white">Marchant Code</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -70,22 +70,22 @@ class WServiceCard extends React.Component {
                                     <div className="list-group-item px-0">
                                         <div className="d-flex justify-content-between mb-0">
                                             <div>
-                                                <h6 className="progress-text mb-0 d-block">Starbucks</h6>
+                                                <h6 className="progress-text mb-0 d-block">Uplift Pension Consultancy</h6>
                                             </div>
-                                            <div className="text-right"><span className="h6 text-sm">$5,50 USD</span></div>
+                                            <div className="text-right"><span className="h6 text-sm text-success">&#8358;650,700 NGN</span></div>
                                         </div>
-                                        <p className="mb-0">Pending - San Francisco, United States</p>
+                                        <p className="mb-0">Payments Received - Lagos, Nigeria</p>
                                     </div>
                                     <div className="list-group-item px-0">
                                         <div className="d-flex justify-content-between mb-0">
                                             <div>
-                                                <h6 className="progress-text mb-0 d-block">Nike Sports</h6>
+                                                <h6 className="progress-text mb-0 d-block">Greenleaf Pension</h6>
                                             </div>
-                                            <div className="text-right"><span className="h6 text-sm">$129,00 USD</span></div>
+                                            <div className="text-right"><span className="h6 text-sm">&#8358;129,550 NGN</span></div>
                                         </div>
-                                        <p className="mb-0">Pending - Lisbon, Portugal</p>
+                                        <p className="mb-0">Pending - Kaduna, Nigeria</p>
                                     </div>
-                                    <div className="list-group-item px-0"><a href="#" className="text-sm text-primary text-underline--dashed">View all ›</a></div>
+                                    <div className="list-group-item px-0"><a href="#" className="text-sm text-primary text-underline--dashed">Try it ›</a></div>
                                 </div>
                             </div>
                         </div>
@@ -108,97 +108,15 @@ class WServiceCard extends React.Component {
                             </div>
                         </div>
                         <div className="media d-flex">
-                            <figure style={{width:"40px"}}><img alt="Image placeholder" src="../../assets/img/svg/icons/Like_UI.svg" className="img-fluid" style={{height:"40px"}}/></figure>
+                            <figure style={{width:"40px"}}><img alt="Image placeholder" src="https://preview.webpixels.io/quick-website-ui-kit/assets/img/svg/icons/Keys.svg" className="img-fluid" style={{height:"40px"}}/></figure>
                             <div className="media-body ml-4">
-                                <h6 className="h6 mb-1">Live spending notifications</h6>
-                                <p className="text-muted mb-0">Quick is based on our custom-built framework which contains all the components you need, specially designed for our themes.</p>
+                                <h6 className="h6 mb-1">Secured and reliable integration</h6>
+                                <p className="text-muted mb-0">Secured gateway on your systems. private channel for your customers and an environment for growth.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr className="my-6"/>
-                <div className="row row-grid align-items-center justify-content-between">
-                    <div className="col-lg-6 order-lg-2">
-                        <h3 className="h3">In-app <strong>Analitycs</strong>?</h3>
-                        <p className="mb-5">Code faster and better with Quick which has powerful and lightning fast build tools. You get everything you need to turn your ideas into incredible products.</p>
-                        <div className="media d-flex mb-4">
-                            <figure style={{width:"40px"}}><img alt="Image placeholder" src="https://cdn-images-1.medium.com/max/538/1*2QQEZmuXPiUUfAT1SI4KpA@2x.png" className="img-fluid" style={{height:"40px"}}/></figure>
-                            <div className="media-body ml-4">
-                                <h6 className="h6 mb-1">Setup your account in minutes</h6>
-                                <p className="text-muted">Quick is based on our custom-built framework which contains all the components you need, specially designed for our themes.</p>
-                            </div>
-                        </div>
-                        <div className="media d-flex">
-                            <figure style={{width:"40px"}}><img alt="Image placeholder" src="../../assets/img/svg/icons/Credit_Cards.svg" className="img-fluid" style={{height:"40px"}}/></figure>
-                            <div className="media-body ml-4">
-                                <h6 className="h6 mb-1">Easy to manage your cards</h6>
-                                <p className="text-muted">Quick is based on our custom-built framework which contains all the components you need, specially designed for our themes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-5 order-lg-1">
-                        <div className="card mb-2">
-                            <div className="card-body p-3">
-                                <div className="row row-grid align-items-center">
-                                    <div className="col-lg-8">
-                                        <div className="media align-items-center"><img alt="Image placeholder" src="../../assets/img/theme/light/person-1.jpg" className="avatar bg-danger text-white rounded-circle mr-3"/>
-                                            <div className="media-body">
-                                                <h6 className="mb-1">Payment to John Snow</h6>
-                                                <div className="h6 mb-0 text-sm"><span className="font-weight-bold">$200.00</span> <span className="text-muted">USD</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-auto flex-fill mt-4 mt-sm-0 text-sm-right d-none d-lg-block"><span className="badge badge-pill badge-soft-success">Success</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card mb-2">
-                            <div className="card-body p-3">
-                                <div className="row row-grid align-items-center">
-                                    <div className="col-lg-8">
-                                        <div className="media align-items-center"><img alt="Image placeholder" src="../../assets/img/theme/light/person-2.jpg" className="avatar bg-danger text-white rounded-circle mr-3"/>
-                                            <div className="media-body">
-                                                <h6 className="mb-1">Payment to John Snow</h6>
-                                                <div className="h6 mb-0 text-sm"><span className="font-weight-bold">$200.00</span> <span className="text-muted">USD</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-auto flex-fill mt-4 mt-sm-0 text-sm-right d-none d-lg-block"><span className="badge badge-pill badge-soft-success">Success</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card mb-2">
-                            <div className="card-body p-3">
-                                <div className="row row-grid align-items-center">
-                                    <div className="col-lg-8">
-                                        <div className="media align-items-center"><img alt="Image placeholder" src="../../assets/img/theme/light/person-3.jpg" className="avatar bg-danger text-white rounded-circle mr-3"/>
-                                            <div className="media-body">
-                                                <h6 className="mb-1">Payment to John Snow</h6>
-                                                <div className="h6 mb-0 text-sm"><span className="font-weight-bold">$200.00</span> <span className="text-muted">USD</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-auto flex-fill mt-4 mt-sm-0 text-sm-right d-none d-lg-block"><span className="badge badge-pill badge-soft-success">Success</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card mb-2">
-                            <div className="card-body p-3">
-                                <div className="row row-grid align-items-center">
-                                    <div className="col-lg-8">
-                                        <div className="media align-items-center"><img alt="Image placeholder" src="../../assets/img/theme/light/person-4.jpg" className="avatar bg-danger text-white rounded-circle mr-3"/>
-                                            <div className="media-body">
-                                                <h6 className="mb-1">Payment to John Snow</h6>
-                                                <div className="h6 mb-0 text-sm"><span className="font-weight-bold">$200.00</span> <span className="text-muted">USD</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-auto flex-fill mt-4 mt-sm-0 text-sm-right d-none d-lg-block"><span className="badge badge-pill badge-soft-success">Success</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
       );
