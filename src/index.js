@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
-import App from "./Pages/Home/index";
+import App from "./_pages/Home/index";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
