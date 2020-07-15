@@ -1,5 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
+import axios from "axios";
+
 import { NavLink } from "react-router-dom";
 import "./styles.scss";
 
@@ -14,19 +15,31 @@ class Register extends React.Component {
     };
   }
 
-  //   handleSubmit = (event) => {
-  //     event.preventDefault();
-  //   };
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const { name, email, password } = this.state;
 
-  //   handleChange = (event) => {
-  //     const { name, value } = event.target;
-  //     this.setState({ [name]: value });
-  //   };
+    axios
+      .post("/api/auth/users/create", {
+        name,
+        email,
+        password,
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  componentDidMount() {}
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
 
   render() {
-    const { name, email, password } = this.state;
     return (
       <section>
         <div className="container d-flex flex-column">
@@ -50,7 +63,6 @@ class Register extends React.Component {
                         id="input-name"
                         name="name"
                         placeholder="John Ive"
-                        value={name}
                         onChange={this.handleChange}
                       />
                       <div className="input-group-prepend">
@@ -83,7 +95,6 @@ class Register extends React.Component {
                         id="input-email"
                         name="email"
                         placeholder="name@example.com"
-                        value={email}
                         onChange={this.handleChange}
                       />
                       <div className="input-group-prepend">
@@ -129,7 +140,6 @@ class Register extends React.Component {
                         className="form-control form-control-prepend"
                         id="input-password"
                         placeholder="********"
-                        value={password}
                         onChange={this.handleChange}
                       />
                       <div className="input-group-prepend">
@@ -194,8 +204,4 @@ class Register extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
-});
-
-export default connect(mapStateToProps)(Register);
+export default Register;
