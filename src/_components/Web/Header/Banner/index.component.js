@@ -1,4 +1,6 @@
 import React from 'react';
+import img from './iphone.png';
+
 
 
 class WBanner extends React.Component {
@@ -23,10 +25,10 @@ class WBanner extends React.Component {
                         <div className="row align-items-center">
                             <div className="col-12 col-md-5 order-md-2 mb-5 mb-md-0">
                                 <div className="position-relative left-5 left-md-0">
-                                    <figure><img alt="" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/128029242/original/f03e30a7ed42172f48231623223ff075a18c4440/implement-a-ussd-application.jpg" className="img-fluid mw-md-130 mw-lg-100 rounded perspective-md-right"/></figure>
+                                    <figure><img alt="" src={img} style={{height:"550px"}}/></figure>
                                 </div>
                                 <div className="card shadow-lg mb-3 col-8 col-md-6 col-lg-5 px-0 position-absolute bottom-n6 bottom-md-n5 left-4 left-md-n4 z-index-100">
-                                    <div className="card-body px-lg-1 pt-5 text-center h-100">
+                                    <div className="card-body px-lg-1 pt-2 text-center h-100">
                                         <div className="icon icon-lg icon-shape rounded-circle bg-soft-success text-success"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-check">
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg></div>

@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import WHeader from "../../Components/Web/Header/index.component";
-import WServiceCard from "../../Components/Web/Service/Card/index.component";
-import Login from "../../Components/Web/Header/Login/index.component";
-import Register from "../../Components/Web/Header/Register/index.component";
-import Pricing from "../../Components/Web/Header/Pricing/index.component";
-import CreateProduct from "../../Components/Web/Header/Create-product/index.component";
+import WHeader from "../../_components/Web/Header/index.component";
+import WServiceCard from "../../_components/Web/Service/Card/index.component";
+import Login from "../Auth/login.component";
+import Register from "../Auth/register.component";
+import Pricing from "../Pricing/index.component";
+import CreateProduct from "../Create-product/index.component";
 
 function App() {
   return (
