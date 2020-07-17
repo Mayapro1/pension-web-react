@@ -18,18 +18,20 @@ class Register extends React.Component {
     event.preventDefault();
     const { name, email, password } = this.state;
 
+    const url = "http://localhost:5000/api/auth/users/create";
+
     axios
-      .post("/api/auth/users/create", {
+      .post(url, {
         name,
         email,
         password,
       })
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
+      .then(() => {
+        //console.log(res.data);
+        this.setState({ name: "", email: "", password: "" });
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
       });
   };
 
@@ -39,6 +41,7 @@ class Register extends React.Component {
   };
 
   render() {
+    const { name, email, password } = this.state;
     return (
       <section>
         <div className="container d-flex flex-column">
@@ -47,7 +50,8 @@ class Register extends React.Component {
               <div>
                 <div className="mb-3 text-center">
                   <h6 className="h5 mb-1 text-left text-uppercase">
-                    Let's get you started with your PensionAnalytica account
+                    Let&apos;s get you started with your PensionAnalytica
+                    account
                   </h6>
                 </div>
                 <span className="clearfix"></span>
@@ -61,6 +65,7 @@ class Register extends React.Component {
                         className="form-control form-control-prepend"
                         id="input-name"
                         name="name"
+                        value={name}
                         placeholder="John Ive"
                         onChange={this.handleChange}
                       />
@@ -73,9 +78,9 @@ class Register extends React.Component {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="feather feather-user"
                           >
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -93,6 +98,7 @@ class Register extends React.Component {
                         className="form-control form-control-prepend"
                         id="input-email"
                         name="email"
+                        value={email}
                         placeholder="name@example.com"
                         onChange={this.handleChange}
                       />
@@ -105,9 +111,9 @@ class Register extends React.Component {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="feather feather-at-sign"
                           >
                             <circle cx="12" cy="12" r="4"></circle>
@@ -136,8 +142,10 @@ class Register extends React.Component {
                     <div className="input-group input-group-merge">
                       <input
                         type="password"
+                        name="password"
                         className="form-control form-control-prepend"
                         id="input-password"
+                        value={password}
                         placeholder="********"
                         onChange={this.handleChange}
                       />
@@ -150,9 +158,9 @@ class Register extends React.Component {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="feather feather-key"
                           >
                             <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
@@ -168,8 +176,12 @@ class Register extends React.Component {
                         className="custom-control-input"
                         id="check-terms"
                         checked
+                        onChange={this.handleChange}
                       />{" "}
-                      <label className="custom-control-label" for="check-terms">
+                      <label
+                        className="custom-control-label"
+                        htmlFor="check-terms"
+                      >
                         I agree to the{" "}
                         <a href="../../pages/utility/terms.html">
                           terms and conditions
@@ -178,7 +190,7 @@ class Register extends React.Component {
                     </div>
                   </div>
                   <div className="mt-4">
-                    <button type="button" className="btn btn-block btn-primary">
+                    <button type="submit" className="btn btn-block btn-primary">
                       Create my account
                     </button>
                   </div>
