@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 
 import "./index.css";
-import App from "./Pages/Home/index";
+import App from "./_pages/Home/index";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(

@@ -4771,7 +4771,8 @@ input[type=submit].btn-block {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: .75rem 1rem
+    padding: .75rem 1rem;
+    margin-top: 50px;
 }
 
 .navbar .container,
@@ -4811,7 +4812,8 @@ input[type=submit].btn-block {
 
 .navbar-nav .nav-link {
     padding-right: 0;
-    padding-left: 0
+    padding-left: 0;
+    color: #152c5b !important;
 }
 
 .navbar-nav .dropdown-menu {

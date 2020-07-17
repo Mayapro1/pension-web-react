@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-
 import { NavLink } from "react-router-dom";
 import "./styles.scss";
 
@@ -38,6 +37,7 @@ class Register extends React.Component {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
+
 
   render() {
     return (
@@ -203,5 +203,6 @@ class Register extends React.Component {
     );
   }
 }
+           
 
 export default Register;
