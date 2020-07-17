@@ -1,5 +1,10 @@
 $white: #f4f6f8;
+$darkBlue: #152c5b;
 
 section {
     background-color: $white;
+}
+
+.getstarted {
+    color: $darkBlue !important;
 }
