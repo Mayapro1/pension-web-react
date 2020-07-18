@@ -8,3 +8,25 @@ section {
 .getstarted {
     color: $darkBlue !important;
 }
+
+div.has-error  {
+    color: $white;
+    text-align: left;
+    padding: 0px 15px;
+    font-weight: 400 !important;
+    letter-spacing: 1.3px;
+
+}
+
+div.has-error p {
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+    font-size: 17px;
+   
+}
+
+
+.swal2-popup {
+    justify-content: left !important;
+}
