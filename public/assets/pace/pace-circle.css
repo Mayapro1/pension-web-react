@@ -1,0 +1,55 @@
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 10px;
+    right: 30px;
+    background: yellow;
+    color: yellow;
+    transform: translateX(100%) translateY(-100%) rotate(45deg);
+    pointer-events: none;
+  }
+  
+  .pace.pace-active .pace-activity {
+    -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+  }
+  
+  .pace .pace-activity::after {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      display: block;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      content: '';
+  }
+  
+  .pace .pace-activity::after {
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid transparent;
+      border-top: 2px solid var(--indigo);
+      border-right: 2px solid var(--indigo);
+      border-left: 2px solid var(--indigo);
+      -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+      animation: pace-theme-corner-indicator-spin 1s linear infinite;
+  }
+  
+  @-webkit-keyframes pace-theme-corner-indicator-spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(359deg); }
+  }
+  @keyframes pace-theme-corner-indicator-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+  }
