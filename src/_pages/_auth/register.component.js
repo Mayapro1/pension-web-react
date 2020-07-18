@@ -2,9 +2,11 @@ import React from "react";
 import axios from "axios";
 import { NavLink, Redirect } from "react-router-dom";
 import "./styles.scss";
-import Swal from 'sweetalert2';
 import Pace from 'react-pace-progress'
 import Button from 'react-bootstrap-button-loader';
+import  toastr  from '../../_helper/toastr/index';
+import * as _constants from '../../_helper/toastr/response'
+
 
 
 
@@ -22,43 +24,8 @@ class Register extends React.Component {
       registerLabel: "Create free account",
       redirect: null
       
-    };  
-    
+    };
 
-  }
-
-
-  ToastrConfig = () => {
-    return  Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: true,
-      onOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    });
-  }
-
-  Toastr = (e) => {
-
-    this.ToastrConfig().fire({
-      icon: e.icon,
-      html: `
-      <div class="has-error">
-        <p>${ e.title } </p>
-        <span>${ e.message }</span>
-      </div>`,
-      background: e.color,
-      width: '400px'
-    }).then(() =>{
-      if(e.isValid){
-      this.setState({ redirect: "/login" });
-
-      }
-    });
   }
 
   handleSubmit = (event) => {
@@ -76,15 +43,17 @@ class Register extends React.Component {
         password,
       })
       .then((res) => {
-        this.handleResponse(res);
         this.setState({ name: "", email: "", password: "", isLoading: false, registerLabel: 'Create free account' });
-        let e = { icon:'success', title: 'Success', message: 'Your account has been created', color: '#3bb75e', isValid: true};
-        this.Toastr(e);
+        toastr.success({ type: _constants.REGISTER_SUCCESS})
+        .then(() => {
+          this.setState({  redirect: '/login' })
+        });
+        
+        
+       
       })
       .catch((err) => {
-        let e = { icon:'error', title: 'Could not create your account', message: err.response.data.message, color: '#bd362f', isValid: false};
-        this.Toastr(e);
-        // console.log(error.response.data.message);
+        toastr.error({ type: _constants.REGISTER_INVALID, isValid: false});
         this.setState({ isLoading: false, registerLabel: 'Create free account'})
       });
   };
@@ -94,14 +63,7 @@ class Register extends React.Component {
 
     this.setState({ [name]: value});
        
-
-        
-        
   };
-
-  handleResponse = (event) => {
-    console.log(event);
-  }
 
   render() {
     const { name, email, password } = this.state;
