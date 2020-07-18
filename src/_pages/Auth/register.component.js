@@ -1,9 +1,17 @@
 import React from "react";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import "./styles.scss";
+import Swal from 'sweetalert2';
+import Pace from 'react-pace-progress'
+import Button from 'react-bootstrap-button-loader';
+
+
+
+
 
 class Register extends React.Component {
+  
   constructor() {
     super();
 
@@ -11,7 +19,46 @@ class Register extends React.Component {
       name: "",
       email: "",
       password: "",
-    };
+      registerLabel: "Create free account",
+      redirect: null
+      
+    };  
+    
+
+  }
+
+
+  ToastrConfig = () => {
+    return  Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      onOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    });
+  }
+
+  Toastr = (e) => {
+
+    this.ToastrConfig().fire({
+      icon: e.icon,
+      html: `
+      <div class="has-error">
+        <p>${ e.title } </p>
+        <span>${ e.message }</span>
+      </div>`,
+      background: e.color,
+      width: '400px'
+    }).then(() =>{
+      if(e.isValid){
+      this.setState({ redirect: "/login" });
+
+      }
+    });
   }
 
   handleSubmit = (event) => {
@@ -19,6 +66,8 @@ class Register extends React.Component {
     const { name, email, password } = this.state;
 
     const url = "http://localhost:5000/api/auth/users/create";
+    this.setState({isLoading: true, registerLabel: ' '});
+
 
     axios
       .post(url, {
@@ -26,24 +75,43 @@ class Register extends React.Component {
         email,
         password,
       })
-      .then(() => {
-        //console.log(res.data);
-        this.setState({ name: "", email: "", password: "" });
+      .then((res) => {
+        this.handleResponse(res);
+        this.setState({ name: "", email: "", password: "", isLoading: false, registerLabel: 'Create free account' });
+        let e = { icon:'success', title: 'Success', message: 'Your account has been created', color: '#3bb75e', isValid: true};
+        this.Toastr(e);
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch((err) => {
+        let e = { icon:'error', title: 'Could not create your account', message: err.response.data.message, color: '#bd362f', isValid: false};
+        this.Toastr(e);
+        // console.log(error.response.data.message);
+        this.setState({ isLoading: false, registerLabel: 'Create free account'})
       });
   };
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({ [name]: value });
+
+    this.setState({ [name]: value});
+       
+
+        
+        
   };
+
+  handleResponse = (event) => {
+    console.log(event);
+  }
 
   render() {
     const { name, email, password } = this.state;
+    if(this.state.redirect){
+      return <Redirect to={this.state.redirect} />
+    }
     return (
+      
       <section>
+      {this.state.isLoading ? <Pace color="#152c5b" height={3}/> : null}
         <div className="container d-flex flex-column">
           <div className="row align-items-center justify-content-center min-vh-100">
             <div className="col-md-8 col-lg-5 py-6">
@@ -190,9 +258,9 @@ class Register extends React.Component {
                     </div>
                   </div>
                   <div className="mt-4">
-                    <button type="submit" className="btn btn-block btn-primary">
-                      Create my account
-                    </button>
+                    <Button type="submit" loading={this.state.isLoading} disabled={!this.state.email || !this.state.name || !this.state.password} className="btn btn-block btn-primary">
+                      {this.state.registerLabel}
+                    </Button>
                   </div>
                 </form>
                 {/* <div className="py-3 text-center"><span className="text-xs text-uppercase">or</span></div> */}
@@ -215,4 +283,4 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+export default (Register);
