@@ -4,11 +4,12 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import store from "./_reducers/store";
+import Store from "./_reducers/store";
 
 import "./index.css";
 import App from "./_pages/Home/index";
 import * as serviceWorker from "./serviceWorker";
+const store = Store();
 
 ReactDOM.render(
   <React.StrictMode>
