@@ -13,8 +13,8 @@
     z-index: 2000;
     top: 10px;
     right: 30px;
-    background: yellow;
-    color: yellow;
+    background: #008aff;
+    color: #008aff;
     transform: translateX(100%) translateY(-100%) rotate(45deg);
     pointer-events: none;
   }
@@ -38,9 +38,9 @@
       width: 20px;
       height: 20px;
       border-bottom: 2px solid transparent;
-      border-top: 2px solid var(--indigo);
-      border-right: 2px solid var(--indigo);
-      border-left: 2px solid var(--indigo);
+      border-top: 2px solid #008aff;
+      border-right: 2px solid #008aff;
+      border-left: 2px solid #008aff;
       -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
       animation: pace-theme-corner-indicator-spin 1s linear infinite;
   }
