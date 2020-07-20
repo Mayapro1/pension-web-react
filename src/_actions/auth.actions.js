@@ -31,3 +31,7 @@ export function logout(){
         dispatch(setCurrentUser({}));
     }
 }
+
+export function addFlashMessage(){
+    
+}
