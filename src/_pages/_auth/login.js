@@ -7,6 +7,8 @@ import Button from 'react-bootstrap-button-loader';
 import { login } from '../../_actions/auth.actions';
 import  toastr  from '../../_helper/toastr/index';
 import * as _constants from '../../_helper/toastr/types'
+import { PropTypes } from 'prop-types';
+
 
 
 class Login extends React.Component {
@@ -43,6 +45,7 @@ class Login extends React.Component {
 
   render(){
     const {  email, password } = this.state;
+    const { isAuthenticated } = this.props.auth;
     return (
         <section>
              {this.state.isLoading ? <Pace color="#008aff" height={3}/> : null}
@@ -161,7 +164,14 @@ class Login extends React.Component {
 }
 
 Login.protoTypes = {
-    login: React.PropTypes
+    login: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
 }
 
-export default connect(null, {login})(Login);
+function mapStateToProps(state){
+    return {
+        auth: state.user
+    }
+}
+
+export default connect(mapStateToProps, {login})(Login);
