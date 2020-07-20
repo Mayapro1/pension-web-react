@@ -7,7 +7,7 @@ import Button from 'react-bootstrap-button-loader';
 import { login } from '../../_actions/auth.actions';
 import  toastr  from '../../_helper/toastr/index';
 import * as _constants from '../../_helper/toastr/types'
-import { PropTypes } from 'prop-types';
+import PropTypes  from 'prop-types';
 
 
 
@@ -28,7 +28,7 @@ class Login extends React.Component {
         this.setState({isLoading: true, loginLabel: ' '});
         this.props.login(this.state)
         .then((res) => {
-            this.setState({ email: "", password: "", isLoading: false, loginLabel: 'Login to your dashboard' });
+            this.setState({ email: "", password: "", isLoading: false, loginLabel: 'Login to your dashboard', redirect: '/dashboard' });
             toastr.success({ type: _constants.LOGIN_SUCCESS });
            
           })
