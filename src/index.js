@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import Store from "./_reducers/store";
 import "./index.css";
-import App from "./_pages/Home/index";
+import App from "./_pages/_home/index";
 import * as serviceWorker from "./serviceWorker";
 import { setCurrentUser } from "./_actions/auth.actions";
 import jwt from 'jsonwebtoken';
