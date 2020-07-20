@@ -1,7 +1,9 @@
 import { UserActionTypes } from "../../_constants/user.types";
+import isEmpty from 'lodash/isEmpty';
 
 const INITIAL_STATE = {
-  currentUser: null,
+  currentUser: {},
+  isAuthenticated: false
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -9,7 +11,8 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case UserActionTypes.SET_CURRENT_USER:
       return {
         ...state,
-        currentUser: action.payload,
+        isAuthenticated: !isEmpty(action.user),
+        currentUser: action.user,
       };
     default:
       return state;
