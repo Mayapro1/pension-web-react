@@ -1,9 +1,54 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { logout } from '../../../../_actions/auth.actions';
+
 
 
 class WNavBar extends React.Component {
+
+    Logout(e){
+        e.preventDefault();
+        this.props.logout();
+    }
     render() {
+        const { isAuthenticated } =  this.props.auth
+        const userlinks = (
+        <>
+            <li className="nav-item"><NavLink to="/register" className="btn btn-sm btn-primary btn-icon ml-3 p-2" >
+                <span className="btn-inner--icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-shopping-bag">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </span> 
+                <span className="btn-inner--text">Return to dashboard</span></NavLink>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" onClick={this.Logout.bind(this)}>Logout</a>
+            </li>
+        </>
+        )
+
+        const guestlinks = (
+        <>
+            <li className="nav-item">
+                <NavLink className="nav-link" to="/login">Login</NavLink>
+            </li>
+            <li className="nav-item"><NavLink to="/register" className="btn btn-sm btn-primary btn-icon ml-3 p-2" >
+                <span className="btn-inner--icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-shopping-bag">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </span> 
+                <span className="btn-inner--text">Create free account</span></NavLink>
+            </li>
+        </>
+        );
       return (
         <header className="header-transparent" id="header-main">
             <nav className="navbar navbar-main navbar-expand-lg navbar-light" id="navbar-main">
@@ -37,14 +82,7 @@ class WNavBar extends React.Component {
                             </li>
                         </ul>
                         <ul className="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/login">Login</NavLink>
-                            </li>
-                            <li className="nav-item"><NavLink to="/register" className="btn btn-sm btn-primary btn-icon ml-3 p-2" ><span className="btn-inner--icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-shopping-bag">
-                                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                        </svg></span> <span className="btn-inner--text">Create free account</span></NavLink></li>
+                           {isAuthenticated ? userlinks : guestlinks}
                         </ul>
                         <div className="d-lg-none px-4 text-center"><NavLink to="/register" className="btn btn-block btn-sm btn-primary" >Purchase now</NavLink></div>
                     </div>
@@ -54,4 +92,15 @@ class WNavBar extends React.Component {
       );
     }
 }
-export default WNavBar;
+
+WNavBar.protoTypes = {
+    auth: PropTypes.object.isRequired,
+    logout: PropTypes.func.isRequired
+}
+
+function mapStateProps (state){
+   return {
+        auth: state.user
+   }
+}
+export default connect(mapStateProps, {logout})(WNavBar);
