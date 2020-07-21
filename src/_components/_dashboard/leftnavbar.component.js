@@ -177,3 +177,5 @@ class leftNavBar extends React.Component {
         )
     }
 }
+
+export default leftNavBar;
