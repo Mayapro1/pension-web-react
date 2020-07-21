@@ -1,0 +1,135 @@
+.leftbar-tab-menu {
+    min-width: 270px;
+    z-index: 1001
+}
+
+.leftbar-tab-menu .main-icon-menu {
+    width: 70px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #506ee4;
+    height: 100%;
+    z-index: 1001;
+    position: fixed;
+    top: 0
+}
+
+.leftbar-tab-menu .main-icon-menu .logo-metrica .logo-sm {
+    height: 34px
+}
+
+.leftbar-tab-menu .main-icon-menu .menu-icon.icon-dual {
+    color: #becae6;
+    fill: rgba(190, 202, 230, 0.25)
+}
+
+.leftbar-tab-menu .main-icon-menu .pro-metrica-end {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.leftbar-tab-menu .main-icon-menu .nav {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 70px
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link {
+    position: relative;
+    padding: 0;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link:hover,
+.leftbar-tab-menu .main-icon-menu .nav-link:focus {
+    color: #fff
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link:active,
+.leftbar-tab-menu .main-icon-menu .nav-link.active {
+    color: #506ee4
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link:active .menu-icon.icon-dual,
+.leftbar-tab-menu .main-icon-menu .nav-link.active .menu-icon.icon-dual {
+    color: #fff;
+    fill: rgba(255, 255, 255, 0.25)
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link+.nav-link {
+    margin-top: 30px
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link i {
+    font-size: 15px
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link i.drip-icon {
+    line-height: 1
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link i.drip-icon ::before {
+    width: auto
+}
+
+.leftbar-tab-menu .main-icon-menu .nav-link.active:before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: 10px;
+    border-right: 10px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent
+}
+
+@media (min-width: 992px) {
+    .leftbar-tab-menu .main-icon-menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+}
+
+@media (max-width: 991.98px) {
+    .leftbar-tab-menu .main-icon-menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+}

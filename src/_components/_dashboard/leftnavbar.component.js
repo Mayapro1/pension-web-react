@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/pension-leftnavbar.scss';
 
 class leftNavBar extends React.Component {
     render() {
