@@ -26,7 +26,8 @@ class Login extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({isLoading: true, loginLabel: ' '});
-        this.props.login(this.state)
+        const { email, password} = this.state;
+        this.props.login({email,password})
         .then((res) => {
             this.setState({ email: "", password: "", isLoading: false, loginLabel: 'Login to your dashboard', redirect: '/dashboard' });
             toastr.success({ type: _constants.LOGIN_SUCCESS });
@@ -46,6 +47,7 @@ class Login extends React.Component {
   render(){
     const {  email, password } = this.state;
     const { isAuthenticated } = this.props.auth;
+    if(isAuthenticated || this.state.redirect) return <Redirect to={this.state.redirect}/>
     return (
         <section>
              {this.state.isLoading ? <Pace color="#008aff" height={3}/> : null}
